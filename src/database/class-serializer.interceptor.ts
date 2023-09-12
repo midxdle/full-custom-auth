@@ -58,3 +58,11 @@ function MongooseClassSerializerInterceptor(
 }
 
 export default MongooseClassSerializerInterceptor;
+
+/**
+ * This interceptor is specialized for NestJS applications and specifically for handling responses.
+ * It checks the response object and, if it contains instances of Document (likely Mongoose documents),
+ * it transforms them into instances of a specified class.
+ * It is typically used within NestJS controllers or route handlers
+ * to ensure that responses contain instances of classes for consistency and additional functionality.
+ */
