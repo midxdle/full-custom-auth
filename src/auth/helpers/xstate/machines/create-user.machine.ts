@@ -15,7 +15,7 @@ const CreateUserMachine = createMachine<CreateUserContext>(
     states: {
       checking: {
         invoke: {
-          src: 'checkUserIfExists',
+          src: 'checkIfUserExists',
           onDone: {
             target: 'creating',
           },

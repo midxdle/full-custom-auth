@@ -1,0 +1,5 @@
+{
+    "server": "Server Error",
+    "unauthorized": "Unauthorization Error",
+    "forbidden": "Forbidden Error"
+}
