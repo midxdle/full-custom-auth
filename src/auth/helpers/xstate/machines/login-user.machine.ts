@@ -83,3 +83,5 @@ export const loginUserMachine = createMachine<LoginUserContext>(
     },
   },
 );
+
+export default loginUserMachine;
