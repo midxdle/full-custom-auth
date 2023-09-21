@@ -10,9 +10,7 @@ async function bootstrap() {
   const configService = app.get<ConfigService>(ConfigService);
   app.useGlobalPipes(new ValidationPipe());
   const swagger = configService.get('SWAGGER_ENABLED');
-  if (swagger) {
-    setupSwagger(app);
-  }
+  if (swagger) setupSwagger(app);
   app.use(cookieParser());
   const port = configService.get<number>('PORT');
   await app.listen(port);

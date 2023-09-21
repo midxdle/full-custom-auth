@@ -1,7 +1,7 @@
 import { TestingModule } from '@nestjs/testing';
 import { getModelToken } from '@nestjs/mongoose';
-import { Model } from 'mongoose';
 import { Faker, faker } from '@faker-js/faker';
+import { Model } from 'mongoose';
 
 export abstract class Factory<T> {
   modelToken: string;

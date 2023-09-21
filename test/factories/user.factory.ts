@@ -1,6 +1,6 @@
+import { TestingModule } from '@nestjs/testing';
 import { Factory } from './factory';
 import { User, UserDocument } from 'src/user/schemas/user.schema';
-import { TestingModule } from '@nestjs/testing';
 import { UserService } from 'src/user/user.service';
 
 export class UserFactory extends Factory<UserDocument> {
