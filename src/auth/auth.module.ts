@@ -4,6 +4,7 @@ import { AuthController } from './auth.controller';
 import { CryptoModule } from './helpers/crypto/crypto.module';
 import { JwtModule } from './helpers/jwt/jwt.module';
 import { ConfigService } from '@nestjs/config';
+import { UserModule } from 'src/user/user.module';
 
 @Module({
   imports: [
@@ -14,6 +15,7 @@ import { ConfigService } from '@nestjs/config';
       inject: [ConfigService],
     }),
     CryptoModule,
+    UserModule,
   ],
   controllers: [AuthController],
   providers: [AuthService],

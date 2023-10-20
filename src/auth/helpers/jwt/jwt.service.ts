@@ -13,8 +13,9 @@ const MS_PER_SEC = 1000;
 @Injectable()
 export class JwtService {
   constructor(
-    @Inject(MODULE_OPTIONS_TOKEN) private options: JwtModuleOptions,
     private readonly cryptroService: CryptoService,
+    @Inject(MODULE_OPTIONS_TOKEN)
+    private readonly options: JwtModuleOptions,
   ) {}
 
   sign(options: SignTokenOptions): SignToken {
