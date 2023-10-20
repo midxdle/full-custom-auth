@@ -1,13 +1,15 @@
 import { Module } from '@nestjs/common';
 import { UserService } from './user.service';
 import { UserController } from './user.controller';
-import { AuthModule } from 'src/auth/auth.module';
 import { MongooseModule } from '@nestjs/mongoose';
 import { User, UserSchema } from './schemas/user.schema';
+import { CryptoModule } from 'src/auth/helpers/crypto/crypto.module';
+import { JwtModule } from 'src/auth/helpers/jwt/jwt.module';
 
 @Module({
   imports: [
-    AuthModule,
+    CryptoModule,
+    JwtModule,
     MongooseModule.forFeature([
       {
         name: User.name,
@@ -17,5 +19,6 @@ import { User, UserSchema } from './schemas/user.schema';
   ],
   controllers: [UserController],
   providers: [UserService],
+  exports: [UserService],
 })
 export class UserModule {}
